@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration_Activity"
+    android:background="?attr/backgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/back_que_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransParent"
+            android:fontFamily="@font/poppins"
+            android:text="&lt;"
+            android:textAlignment="center"
+            android:textColor="?attr/colorFont"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_alignBaseline="@id/btn_back"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_allCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="?attr/colorFont"
+            android:text="Registration"
+            android:textSize="30sp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@id/back_que_layout1"
+        android:id="@+id/tv_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/poppins"
+        android:text=" Let's Start With\n Registration!"
+        android:textAlignment="viewStart"
+        android:textColor="?attr/colorTint"
+        android:textSize="25sp"
+        android:typeface="sans" />
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tv_reg"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="6dp"
+                app:cardBackgroundColor="?attr/cardBackground"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/reg_email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@android:drawable/sym_action_email"
+                            android:fontFamily="@font/poppins"
+                            android:text="Email"
+                            android:textColor="?attr/colorFont"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:inputType="textEmailAddress"
+                            android:textColor="?attr/colorFont"
+                            android:foregroundTint="?attr/colorTint"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reg_username_layout"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/reg_email_layout"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Username"
+                            android:textColor="?attr/colorFont"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:inputType="textPersonName"
+                            android:textColor="?attr/colorFont"
+                            android:foregroundTint="?attr/colorTint"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reg_password_layout"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/reg_username_layout"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                            android:fontFamily="@font/poppins"
+                            android:text="Password"
+                            android:textColor="?attr/colorFont"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:inputType="textPassword"
+                            android:textColor="?attr/colorFont"
+                            android:foregroundTint="?attr/colorTint"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                            android:fontFamily="@font/poppins"
+                            android:text="Confirm Password"
+                            android:textColor="?attr/colorFont"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:inputType="textPassword"
+                            android:textColor="?attr/colorFont"
+                            android:foregroundTint="?attr/colorTint"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/reg_password_layout"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/roundedbtn"
+                        android:fontFamily="@font/poppins"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:textSize="18sp"
+                        android:text="Submit"
+                        android:textColor="?attr/colorFont"
+                        android:typeface="sans" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myProfile"
+    android:background="?attr/backgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/back_pro_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_back2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransParent"
+            android:fontFamily="@font/poppins"
+            android:text="&lt;"
+            android:textAlignment="center"
+            android:textColor="?attr/colorFont"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tv_allCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/btn_back"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins"
+            android:text="Profile"
+            android:textColor="?attr/colorFont"
+            android:textSize="30sp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_pro_layout1"
+        android:layout_margin="15dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="12dp"
+        android:background="?attr/cardBackground">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/myprofile_pic"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/profilepic" />
+
+                        <Button
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/myprofile_pic"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:background="@android:drawable/ic_menu_edit" />
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_pro_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_pro"
+                    android:drawableStart="@android:drawable/sym_action_email"
+                    android:fontFamily="@font/poppins"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/user_email"
+                    android:textColor="?attr/colorFont"
+                    android:textSize="18sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_pro_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pro_email"
+                    android:fontFamily="@font/poppins"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="7dp"
+                    android:text="Full Name"
+                    android:textColor="?attr/colorFont"
+                    android:textSize="18sp"
+                    android:typeface="sans" />
+
+                <EditText
+                    android:id="@+id/et_pro_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pro_name"
+                    android:fontFamily="@font/poppins"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/full_name"
+                    android:textColor="?attr/colorFont"
+                    android:textSize="18sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_pro_uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_pro_name"
+                    android:fontFamily="@font/poppins"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="7dp"
+                    android:text="Username"
+                    android:textColor="?attr/colorFont"
+                    android:textSize="18sp"
+                    android:typeface="sans" />
+
+                <EditText
+                    android:id="@+id/et_pro_uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pro_uname"
+                    android:fontFamily="@font/poppins"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/user_name"
+                    android:textColor="?attr/colorFont"
+                    android:textSize="18sp"
+                    android:typeface="sans" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_pro_uname"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/holo_green_light"
+                    android:fontFamily="@font/poppins"
+                    android:paddingRight="25dp"
+                    android:paddingLeft="25dp"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorFont"
+                    android:textSize="18sp"
+                    android:typeface="sans" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

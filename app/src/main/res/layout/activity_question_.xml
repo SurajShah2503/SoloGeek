@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Question_Activity">
+
+    <RelativeLayout
+        android:id="@+id/back_que_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransParent"
+            android:fontFamily="@font/poppins"
+            android:text="&lt;"
+            android:textAlignment="center"
+            android:textColor="?attr/colorFont"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_alignBaseline="@id/btn_back"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_allCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="?attr/colorFont"
+            android:text="Quiz"
+            android:textSize="30sp"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/back_que_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/poppins"
+                android:text="Question : "
+                android:textSize="16sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tv_disp_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_question"
+                android:fontFamily="@font/poppins"
+                android:text="Which two statements are true about comparing two instances of the same class, given that the equals() and hashCode() methods have been properly overridden?\n
+1.If the equals() method returns true, the hashCode() comparison == must return true.\n
+2.If the equals() method returns false, the hashCode() comparison != must return true.\n
+3.If the hashCode() comparison == returns true, the equals() method must return true.\n
+4.If the hashCode() comparison == returns true, the equals() method might return true."
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:textColor="?attr/colorFont"/>
+
+        <RadioGroup
+            android:layout_marginTop="20dp"
+            android:id="@+id/radio_group"
+            android:layout_below="@id/tv_disp_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="1 and 4"
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:buttonTint="?attr/colorTint"
+                android:textColor="?attr/colorFont"/>
+
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="2 and  3"
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:buttonTint="?attr/colorTint"
+                android:textColor="?attr/colorFont"/>
+
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="3 and 4"
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:buttonTint="?attr/colorTint"
+                android:textColor="?attr/colorFont"/>
+
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="1 and 3"
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:buttonTint="?attr/colorTint"
+                android:textColor="?attr/colorFont"/>
+
+        </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio_group"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_green_light"
+                android:fontFamily="@font/poppins"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="Check"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
